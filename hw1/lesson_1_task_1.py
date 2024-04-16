@@ -1,2 +1,2 @@
 my_name = "Юля"
-print("Привет! меня зовут, " + my_name)
+print(my_name)
