@@ -1,7 +1,9 @@
-def is_year_leap(year):
-    if (year % 4 == 0):
-        print('Год', year, True)
-    else:
-        print('Год', year, False)
+import calendar
 
-is_year_leap(year=2021)
+year = 2021
+is_leap = calendar.isleap(year)
+
+if is_leap:
+    print(f"{year} - високосный год")
+else:
+    print(f"{year} - не високосный год")
