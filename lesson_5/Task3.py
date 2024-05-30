@@ -15,7 +15,7 @@ try:
     chrome.get("http://uitestingplayground.com/dynamicid")
 
     for _ in range(3):
-        blue_button = firefox.find_element("xpath", "//button[contains(concat(' ', normalize-space(@class), ' '), ' btn btn-primary ')]").click()
+        blue_button = firefox.find_element_by_xpath("//button[contains(@class, 'btn btn-primary')]").click()
         blue_button = chrome.find_element("xpath", "//button[contains(concat(' ', normalize-space(@class), ' '), ' btn btn-primary ')]").click()
         count += 1
         print(count)
