@@ -18,7 +18,7 @@ try:
 
     for _ in range(3):
         blue_button = firefox.find_element(By.XPATH,"//button[@class='btn btn-primary']").click()
-        blue_button = chrome.find_element(By.XPATH, "//button[@class='btn btn-primary']").click()
+        blue_button1 = chrome.find_element(By.XPATH, "//button[@class='btn btn-primary']").click()
         count += 1
         print(count)
         firefox.refresh()

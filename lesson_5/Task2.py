@@ -15,7 +15,7 @@ try:
 
     for _ in range(3):
         blue_button = firefox.find_element("xpath", '//button[text()="Button with Dynamic ID"]').click()
-        blue_button = chrome.find_element("xpath", '//button[text()="Button with Dynamic ID"]').click()
+        blue_button1 = chrome.find_element("xpath", '//button[text()="Button with Dynamic ID"]').click()
         count += 1
         print(count)
         firefox.refresh()
