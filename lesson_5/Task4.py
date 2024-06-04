@@ -17,7 +17,7 @@ try:
     firefox.get("http://the-internet.herokuapp.com/entry_ad")
     chrome.get("http://the-internet.herokuapp.com/entry_ad")
     wait = WebDriverWait(firefox, 10)
-    wait = WebDriverWait(chrome, 10)
+    wait1 = WebDriverWait(chrome, 10)
     modal_window = wait.until(EC.visibility_of_element_located ((By.CSS_SELECTOR, ".modal")))
     close_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".modal-footer")))
     time.sleep(3)

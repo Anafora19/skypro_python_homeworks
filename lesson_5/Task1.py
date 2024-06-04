@@ -14,7 +14,7 @@ firefox.get("http://the-internet.herokuapp.com/add_remove_elements/")
 # пять раз кликните на кнопку add element
 for _ in range(5):
     add_button = chrome.find_element(By.XPATH, '//button[text()="Add Element"]').click()
-    add_button = firefox.find_element(By.XPATH, '//button[text()="Add Element"]').click()
+    add_button1 = firefox.find_element(By.XPATH, '//button[text()="Add Element"]').click()
     sleep(1)
 
 # соберите со страницы список кнопок delete
