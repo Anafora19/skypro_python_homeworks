@@ -6,8 +6,8 @@ db = EmployeeSQL("postgresql://x_clients_user:x7ngHjC1h08a85bELNifgKmqZa8KIR40@d
 
 def test_get_employees():
     
-    company_name = "ABN AMRO"
-    company_description = "Bank (Netherlands)"
+    company_name = "t-bANK"
+    company_description = "Bank"
     response = api.create_company(company_name, company_description)
     company_id = response["id"]
 
@@ -21,8 +21,8 @@ def test_get_employees():
 
 def test_add_employee():
     
-    company_name = "ABN AMRO"
-    company_description = "Bank (Netherlands)"
+    company_name = "t-bANK"
+    company_description = "Bank"
     response = api.create_company(company_name, company_description)
     company_id = response["id"]
 
@@ -32,12 +32,12 @@ def test_add_employee():
 
     
     employee_details = {
-        "first_name": "Philipp",
-        "last_name": "Kirkorov",
-        "middle_name": "Bedrosovich",
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "middle_name": "Ivanovich",
         "company_id": company_id,
-        "email": "Kirkor666@live.com",
-        "phone": "+31612333218"
+        "email": "ivan4554@gmail.com",
+        "phone": "+79112345678"
     }
     new_employee = api.create_employee(**employee_details)
     employee_id = new_employee["id"]
@@ -55,18 +55,18 @@ def test_add_employee():
 
 def test_get_single_employee():
     
-    company_name = "ABN AMRO"
-    company_description = "Bank (Netherlands)"
+    company_name = "t-bANK"
+    company_description = "Bank"
     response = api.create_company(company_name, company_description)
     company_id = response["id"]
 
     employee_details = {
-        "first_name": "Philipp",
-        "last_name": "Kirkorov",
-        "middle_name": "Bedrosovich",
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "middle_name": "Ivanovich",
         "company_id": company_id,
-        "email": "Kirkor666@live.com",
-        "phone": "+31612333218"
+        "email": "ivan4554@gmail.com",
+        "phone": "+79112345678"
     }
     db.create(**employee_details)
     employee_id = db.get_max_id()
@@ -82,18 +82,18 @@ def test_get_single_employee():
 
 def test_edit_employee():
     
-    company_name = "ABN AMRO"
-    company_description = "Bank (Netherlands)"
+    company_name = "t-bANK"
+    company_description = "Bank"
     response = api.create_company(company_name, company_description)
     company_id = response["id"]
 
     employee_details = {
-        "first_name": "Philipp",
-        "last_name": "Kirkorov",
-        "middle_name": "Bedrosovich",
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "middle_name": "Ivanovich",
         "company_id": company_id,
-        "email": "Kirkor666@live.com",
-        "phone": "+31612333218"
+        "email": "ivan4554@gmail.com",
+        "phone": "+79112345678"
     }
     db.create(**employee_details)
     employee_id = db.get_max_id()
@@ -108,3 +108,4 @@ def test_edit_employee():
 
     
     db.delete(employee_id)
+    
